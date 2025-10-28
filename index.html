@@ -1,0 +1,961 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+</head>
+
+<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/script.js"></script>
+    <!-- login -->
+    <div class="w-full h-full fixed hidden" onclick="closee()" id="login" style="background-color:rgba(0,0,0,0.2);">
+        <div class="sm:w-1/3 w-7/8 inset-0 h-4/5 fixed sm:ml-auto mr-1 ml-1 sm:mr-auto mt-auto mb-auto rounded-3xl pl-8 pr-8 pt-5 pb-5 block text-center text-3xl font-bold"
+            style="background-color: #fff;" onclick="test()">
+            <h2 id="t-join">Join Playbook</h2>
+            <p class="block text-center text-base text-gray-500 font-normal mt-1">Playbook gives the design community br
+                one <br> place to share knowledge.</p>
+            <div id="t-email"
+                class="w-full h-12 rounded-xl cursor-pointer hover:bg-[#e9e9e9] bg-[#eeeeee] flex justify-center items-center text-base mt-6">
+                Sign up with email
+            </div>
+            <div id="t-twitter"
+                class="w-full h-12 rounded-xl cursor-pointer hover:bg-[#37b2ff] bg-[#1da1f2] flex justify-center items-center text-base mt-3 text-white">
+                Sign up with Twitter
+            </div>
+            <div id="t-facebook"
+                class="w-full h-12 rounded-xl cursor-pointer hover:bg-[#4d6db1] bg-[#3b5998] flex justify-center items-center text-base mt-3 text-white">
+                Sign up with Facebook
+            </div>
+            <svg class="ml-auto mr-auto mt-6" width="16px" height="20px" viewBox="0 0 16 20" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Desktop-Signin-Email-001-Copy" transform="translate(-712.000000, -562.000000)"
+                        fill="#000000">
+                        <g id="Group-2" transform="translate(520.000000, 223.000000)">
+                            <g id="Group-3" transform="translate(56.000000, 338.000000)">
+                                <g id="Icons-/-Action-/-Lock" transform="translate(132.000000, 0.000000)">
+                                    <g id="Page-1">
+                                        <path
+                                            d="M10,9 L10,6 C10,4.916 10.916,4 12,4 C13.084,4 14,4.916 14,6 L14,9 L10,9 Z M12,17 C10.896,17 10,16.104 10,15 C10,13.896 10.896,13 12,13 C13.104,13 14,13.896 14,15 C14,16.104 13.104,17 12,17 Z M18,9 L17.5,9 C17.224,9 17,8.776 17,8.5 L17,6.176 C17,3.898 15.558,1.772 13.358,1.182 C10.032,0.29 7,2.808 7,6 L7,8.5 C7,8.776 6.776,9 6.5,9 L6,9 C4.9,9 4,9.9 4,11 L4,19 C4,20.1 4.9,21 6,21 L18,21 C19.1,21 20,20.1 20,19 L20,11 C20,9.9 19.1,9 18,9 Z"
+                                            id="Fill-1"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <p class="text-lg">We value your data</p>
+            <p class="block text-center text-sm text-gray-500 font-normal">We only use social login to gather your <br>
+                name, email, and profile photo.</p>
+        </div>
+    </div>
+    <!-- search -->
+    <div onclick="close_search()" class="w-full h-screen fixed flex justify-center items-center hidden z-50"
+        id="search_div" style="background-color: rgba(0,0,0,0.2); ">
+        <div class="bg-white h-[67%] rounded-2xl sm:p-5 p-3 pt-3 pb-3 top-8 fixed inset-0 sm:w-[634px] w-full"
+            style="left: 0; right: -5; margin: 40px auto;">
+            <p class="text-gray-400 text-sm font-medium ">TRENDING GOALS</p>
+            <div class="pt-3 pb-3 sm:text-lg text-base flex items-center justify-between mt-3 cursor-pointer">
+                <p>Team cultures and norms that lead to great</p>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#bdbdbd" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </div>
+            <hr>
+            <div class="pt-3 pb-3 sm:text-lg text-base flex items-center justify-between cursor-pointer">
+                <p>Decide if freelancing is for you</p>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#bdbdbd" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </div>
+            <hr>
+            <div class="pt-3 pb-3 sm:text-lg text-base flex items-center justify-between cursor-pointer">
+                <p>Scope a project with a client</p>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#bdbdbd" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </div>
+            <p class="text-gray-400 text-sm font-medium mt-5">TOP CONTRIBUTORS THIS MONTH</p>
+            <div class="flex items-center justify-between mt-5 mb-3">
+
+                <div class="flex gap-5">
+                    <img class="w-16 h-16 rounded-full"
+                        src="https://askplaybook.s3.amazonaws.com/avatars/1918_avatar.jpeg?1595169908" alt="">
+                    <div>
+                        <h2 class="text-base font-bold">Sherzod Max</h2>
+                        <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="text-xs text-gray-400">29 action items</p>
+                    </div>
+
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header class="sm:hidden h-20 p-3 pl-5 items-center justify-between" id="heade">
+        <div class="flex justify-between">
+            <!-- <div class="flex gap-5 items-center"> -->
+            <p onclick="signin()" class="cursor-pointer">Sign in</p>
+            <h2 class="text-2xl font-bold">Playbook</h2>
+
+            <p onclick="join()"
+                class="bg-blue-700 text-white pr-4 pl-4 pt-1 pb-1 rounded-full hover:bg-blue-800 cursor-pointer transition duration-300">
+                join</p>
+            <!-- </div> -->
+        </div>
+        <div>
+
+        </div>
+
+        <div class="flex items-center h-9 bg-[#ebebeb] pl-2 rounded-xl w-full mt-5" id="search2">
+            <svg class="w-5 h-5 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <input autocomplete="off" id="inp2" onclick="search()" class="bg-[#ebebeb] w-full focus:outline-none mr-2"
+                type="text" placeholder="Search PlayBook">
+        </div>
+
+    </header>
+    <header class="hidden sm:flex h-20 flex p-3 pl-5 items-center justify-between">
+        <h2 class="text-2xl font-bold">Playbook</h2>
+        <div class="flex items-center h-9 bg-[#ebebeb] pl-2 rounded-xl w-3/6" id="search">
+            <svg class="w-5 h-5 text-gray-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <input autocomplete="off" id="inp" onclick="search()" class="bg-[#ebebeb] w-full focus:outline-none mr-2"
+                type="text" placeholder="Search PlayBook">
+        </div>
+        <div class="flex gap-5 items-center">
+            <p onclick="signin()" class="cursor-pointer">Sign in</p>
+            <p onclick="join()"
+                class="bg-blue-700 text-white pr-4 pl-4 pt-1 pb-1 rounded-full hover:bg-blue-800 cursor-pointer transition duration-300">
+                join</p>
+        </div>
+    </header>
+    <main class="sm:w-2/4 ml-auto mr-auto font-bold sm:text-4xl mt-10 sm:mt-5 w-[93%] text-3xl">
+        <h2 class="mb-20">Playbook helps designers achieve their career goals.</h2>
+        <div>
+            <!-- 1 -->
+            <div class="w-full sm:h-48 h-38 flex justify-between rounded-3xl cursor-pointer transition duration-300 hover:scale-105"
+                style="background-color: #f2e8e1;">
+                <div class="sm:p-6 p-6 pr-0 pt-4 ">
+                    <p class="text-2xl sm:static absolute">Get your first <br>Product Design job</p>
+                    <div class="flex mt-16 sm:bottom-0 relative -bottom-16">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/24_avatar.jpg?1516069077" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/480_avatar.png?1505506473" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/3134_avatar.jpg?1511635109" alt="">
+                        <p class="sm:text-base text-xs text-gray-500 ml-5 font-thin sm:visible invisible">21
+                            Contributors</p>
+                    </div>
+                </div>
+                <img class="sm:w-2/5 w-2/3 h-full rounded-3xl"
+                    src="https://askplaybook.s3.amazonaws.com/collections/covers/2_cover.png?1546817674" alt="">
+            </div>
+            <!-- 2 -->
+            <div class="w-full sm:h-48 h-38 flex justify-between rounded-3xl cursor-pointer transition duration-300 hover:scale-105 mt-3"
+                style="background-color: #dcedf5;">
+                <div class="sm:p-6 p-6 pr-0 pt-4">
+                    <p class="text-2xl sm:static absolute">Grow as a Design <br>Manager</p>
+                    <div class="flex mt-16 sm:bottom-0 relative -bottom-16">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/24_avatar.jpg?1516069077" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/480_avatar.png?1505506473" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/3134_avatar.jpg?1511635109" alt="">
+                        <p class="sm:text-base text-xs text-gray-500 ml-5 font-thin sm:visible invisible">16
+                            Contributors</p>
+                    </div>
+                </div>
+                <img class="sm:w-2/5 w-2/3 h-full rounded-3xl"
+                    src="https://askplaybook.s3.amazonaws.com/collections/covers/1_cover.png" alt="">
+            </div>
+            <!-- 3 -->
+            <div class="w-full sm:h-48 h-38 flex justify-between rounded-3xl cursor-pointer transition duration-300 hover:scale-105 mt-3"
+                style="background-color: #fce8ec;">
+                <div class="sm:p-6 p-6 pr-0 pt-4">
+                    <p class="text-2xl sm:static absolute">Build a Design <br>System</p>
+                    <div class="flex mt-16 sm:bottom-0 relative -bottom-16">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/24_avatar.jpg?1516069077" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/480_avatar.png?1505506473" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/3134_avatar.jpg?1511635109" alt="">
+                        <p class="sm:text-base text-xs text-gray-500 ml-5 font-thin sm:visible invisible">38
+                            Contributors</p>
+                    </div>
+                </div>
+                <img class="sm:w-2/5 w-2/3 h-full rounded-3xl"
+                    src="https://askplaybook.s3.amazonaws.com/collections/covers/4_cover.png?1546817779" alt="">
+            </div>
+            <!-- 4 -->
+            <div class="w-full sm:h-48 h-38 flex justify-between rounded-3xl cursor-pointer transition duration-300 hover:scale-105 mt-3"
+                style="background-color: #dcf5e9;">
+                <div class="sm:p-6 p-6 pr-0 pt-4">
+                    <p class="text-2xl sm:static absolute">Be a successful <br>Freelancer</p>
+                    <div class="flex mt-16 sm:bottom-0 relative -bottom-16">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/24_avatar.jpg?1516069077" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/480_avatar.png?1505506473" alt="">
+                        <img style="margin-right: -10px;"
+                            class="w-6 h-6 rounded-full border-2 border-gray-100 border-solid"
+                            src="https://askplaybook.s3.amazonaws.com/avatars/3134_avatar.jpg?1511635109" alt="">
+                        <p class="sm:text-base text-xs text-gray-500 ml-5 font-thin sm:visible invisible">14
+                            Contributors</p>
+                    </div>
+                </div>
+                <img class="sm:w-2/5 w-2/3 h-full rounded-3xl"
+                    src="https://askplaybook.s3.amazonaws.com/collections/covers/3_cover.png?1546817720" alt="">
+            </div>
+        </div>
+        <div class="mt-12">
+            <h2 class="text-3xl">Trending</h2>
+            <p class="text-sm font-thin text-gray-500 mt-1">Read trending advice from our community</p>
+        </div>
+        <div>
+            <h2 class="text-xl mt-8">Team cultures and norms that lead to great design execution</h2>
+            <div>
+                <div class="flex items-center mt-1">
+                    <img style="margin-right: -10px;"
+                        class=" w-5 h-5 rounded-full border-2 border-gray-100 border-solid"
+                        src="https://askplaybook.s3.amazonaws.com/avatars/24_avatar.jpg?1516069077" alt="">
+                    <img style="margin-right: -10px;"
+                        class=" w-5 h-5 rounded-full border-2 border-gray-100 border-solid"
+                        src="https://askplaybook.s3.amazonaws.com/avatars/480_avatar.png?1505506473" alt="">
+                    <p class="text-sm text-gray-500 ml-5 font-thin">2 contributors · 5 action items</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#ebebeb] rounded-2xl pt-2 pl-5 pr-5 pb-2 mt-5">
+            <div class="flex mt-2">
+                <img class="w-6 h-6 rounded-full"
+                    src="https://askplaybook.s3.amazonaws.com/avatars/24_avatar.jpg?1516069077" alt="">
+                <p class="text-base font-medium ml-2">Blake Reary</p>
+            </div>
+            <p class="sm:text-base text-sm font-normal mt-4">Design execution is all about proper alignment. Align your team around
+                the people whose problems you solve. Align your team on values and principles. Align your team on a
+                shared design system and process. Align your team with business metrics and goals. Align other teams to
+                with design. Like a finely-tuned engine, great execution happens when a team is working together
+                efficiently and harmoniously.</p>
+            <p class="sm:text-lg  text-base mt-4">Align your team with business metrics and goals</p>
+            <p class="text-sm font-normal text-gray-600"> Unless you're doing strictly philanthropic work, your company
+                likely exists to grow and make money. Great design can make a huge impact on growth and revenue. Being
+                able to speak in terms of business goals will get your team more buy-in from the rest of the
+                organization. Find the link between the business needs and the impacts that your team can have on them.
+                How will investing in a design system impact product velocity? How will a meticulously crafted icon set
+                impact subscriber numbers?</p>
+            <p class="sm:text-lg text-base mt-4">Align your team around the people whose problems they solve</p>
+            <p class="text-sm font-normal text-gray-600">Make the time for research to happen, even if it's really
+                scrappy. Get designers to sit with Sales or Support or other user-facing functions. Invite people from
+                those functions into crits or brainstorming sessions. Encourage your team to speak in terms of user
+                narratives and goals.</p>
+            <p class="text-lg mt-4">Align on values and principles</p>
+            <p class="text-sm font-normal text-gray-600">Have your team collectively write and agree upon a set of
+                principles. Orient your crits around these principles. Make sure to revisit them occasionally as new
+                members join or new insights come to light.</p>
+            <div
+                class="bg-[#e2e2e2] w-8/9 rounded-xl flex justify-center items-center sm:text-lg text-base h-10 mt-5 hover:bg-[#d4d4d4] transition duration-300 cursor-pointer">
+                See 2 more</div>
+            <div class="flex w-full p-2 mt-3 gap-12">
+                <!-- like -->
+                <div class="flex text-base gap-2 hover:text-gray-800 hover:stroke-gray-800" style="color: #bdbdbd;">
+                    <svg class="stroke-[#bdbdbd] fill-[#bdbdbd] group-hover:fill-gray-800 group-hover:stroke-gray-800 transition-all duration-200"
+                        width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <polygon id="path-1" points="-0.0002 0 13.9998 0 13.9998 18.9999 -0.0002 18.9999"></polygon>
+                        </defs>
+                        <g id="Action-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-Action-Items-Attributed" transform="translate(-44.000000, -150.000000)">
+                                <g id="action-item-copy-3" transform="translate(20.000000, 20.000000)">
+                                    <g id="Group" transform="translate(24.000000, 130.000000)">
+                                        <g id="like">
+                                            <g id="Icons/Action-Item/Like">
+                                                <g id="Like">
+                                                    <path
+                                                        d="M2,20 C0.896,20 0,19.104 0,18 L0,10 C0,8.896 0.896,8 2,8 C3.104,8 4,8.896 4,10 L4,18 C4,19.104 3.104,20 2,20"
+                                                        id="Fill-1" fill="#bdbdbd"></path>
+                                                    <g id="Group-5" transform="translate(6.000000, 0.000000)">
+                                                        <mask id="mask-2" fill="white">
+                                                            <use xlink:href="#path-1"></use>
+                                                        </mask>
+                                                        <g id="Clip-4"></g>
+                                                        <path
+                                                            d="M6.5068,6.6489 L7.9858,2.7059 C8.4768,1.3969 7.5088,-0.0001 6.1108,-0.0001 C5.4198,-0.0001 4.7778,0.3559 4.4118,0.9409 L1.2158,6.0539 C0.4218,7.3259 -0.0002,8.7949 -0.0002,10.2949 L-0.0002,14.9999 C-0.0002,17.2089 1.7908,18.9999 3.9998,18.9999 L8.2018,18.9999 C9.6248,18.9999 10.9408,18.2439 11.6568,17.0159 L12.9098,14.8679 C13.6238,13.6449 13.9998,12.2539 13.9998,10.8369 L13.9998,9.9999 C13.9998,8.8959 13.1048,7.9999 11.9998,7.9999 L7.4438,7.9999 C6.7448,7.9999 6.2618,7.3029 6.5068,6.6489"
+                                                            id="Fill-3" fill="#bdbdbd" mask="url(#mask-2)"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    25
+                </div>
+                <!-- save -->
+                <div class="flex text-base gap-2 hover:fill-gray-800 hover:stroke-gray-800" style="color: #bdbdbd;">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Action-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-Action-Items-Attributed" transform="translate(-136.000000, -150.000000)"
+                                fill="#bdbdbd">
+                                <g id="action-item-copy-3" transform="translate(20.000000, 20.000000)">
+                                    <g id="Group" transform="translate(24.000000, 130.000000)">
+                                        <g id="save" transform="translate(92.000000, 0.000000)">
+                                            <g id="Icons/Action-Item/Save">
+                                                <g id="Save">
+                                                    <path
+                                                        d="M14.085,18.4365 L10.915,15.9975 C10.375,15.5825 9.625,15.5825 9.085,15.9975 L5.915,18.4365 C4.928,19.1955 3.5,18.4925 3.5,17.2475 L3.5,4.9995 C3.5,3.3435 4.843,1.9995 6.5,1.9995 L13.5,1.9995 C15.157,1.9995 16.5,3.3435 16.5,4.9995 L16.5,17.2475 C16.5,18.4925 15.072,19.1955 14.085,18.4365"
+                                                        id="Fill-1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    save
+                </div>
+                <!-- share -->
+                <div class="flex text-base gap-2 hover:fill-gray-800 hover:stroke-gray-800" style="color: #bdbdbd;">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Action-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-Action-Items-Attributed" transform="translate(-236.000000, -150.000000)">
+                                <g id="action-item-copy-3" transform="translate(20.000000, 20.000000)">
+                                    <g id="Group" transform="translate(24.000000, 130.000000)">
+                                        <g id="share" transform="translate(192.000000, 0.000000)">
+                                            <g id="Icons/Action-Item/Share">
+                                                <g id="Share">
+                                                    <g id="Group-7" transform="translate(4.000000, 5.000000)"
+                                                        stroke="#bdbdbd" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="4">
+                                                        <path d="M12,0 L12,9" id="Stroke-1"></path>
+                                                        <path d="M12,0 L3,0" id="Stroke-3"></path>
+                                                        <path d="M12,0 L0,12" id="Stroke-5"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>Share
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div>
+            <h2 class="text-xl mt-8">Decide if freelancing is for you</h2>
+            <div>
+                <div class="flex items-center mt-1">
+                    <img style="margin-right: -10px;"
+                        class=" w-5 h-5 rounded-full border-2 border-gray-100 border-solid"
+                        src="https://askplaybook.s3.amazonaws.com/avatars/1898_avatar.JPG?1505692012" alt="">
+
+                    <p class="text-sm text-gray-500 ml-5 font-thin"> 1 contributor · 6 action items</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#ebebeb] rounded-2xl pt-2 pl-5 pr-5 pb-2 mt-5">
+            <div class="flex mt-2">
+                <img class="w-6 h-6 rounded-full"
+                    src="https://askplaybook.s3.amazonaws.com/avatars/1898_avatar.JPG?1505692012" alt="">
+                <p class="text-base font-medium ml-2">Coleen Baik</p>
+            </div>
+            <p class="sm:text-lg text-base mt-4">Clarify your priorities.</p>
+            <p class="text-sm font-normal text-gray-600">So you’re thinking of going independent. Are you able to
+                explain why freelancing appeals to you, clearly and succinctly? What does that life give you that a
+                salaried one can’t? People become freelancers for a host of different reasons: famil... <span
+                    class="text-gray-800 text-xs font-bold">See more</span></p>
+            <p class="text-lg mt-4">Weigh the risks and understand the responsibilities.</p>
+            <p class="text-sm font-normal text-gray-600">Write down the pros and cons of salaried versus freelance life.
+                Freelancing isn’t just about choosing which day of the week will be Sunday, or working in your pajamas.
+                You’ll have a lot more to take care of than just client work. You’ll pay ... <span
+                    class="text-gray-800 text-xs font-bold">See more</span></p>
+            <p class="text-lg mt-4">Talk to people.</p>
+            <p class="text-sm font-normal text-gray-600">The less of a black box it is, the less stressful it'll be, and
+                you’ll be able to reserve more of your headspace for the actual work of setting yourself up as a
+                freelancer. You can start by sitting down to compose key questions, then asking... <span
+                    class="text-gray-800 text-xs font-bold">See more</span></p>
+            <div
+                class="bg-[#e2e2e2] w-8/9 rounded-xl flex justify-center items-center text-lg h-10 mt-5 hover:bg-[#d4d4d4] transition duration-300 cursor-pointer">
+                See 3 more</div>
+            <div class="flex w-full p-2 mt-3 gap-12">
+                <!-- like -->
+                <div class="flex text-base gap-2 hover:text-gray-800 hover:stroke-gray-800" style="color: #bdbdbd;">
+                    <svg class="stroke-[#bdbdbd] fill-[#bdbdbd] group-hover:fill-gray-800 group-hover:stroke-gray-800 transition-all duration-200"
+                        width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <polygon id="path-1" points="-0.0002 0 13.9998 0 13.9998 18.9999 -0.0002 18.9999"></polygon>
+                        </defs>
+                        <g id="Action-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-Action-Items-Attributed" transform="translate(-44.000000, -150.000000)">
+                                <g id="action-item-copy-3" transform="translate(20.000000, 20.000000)">
+                                    <g id="Group" transform="translate(24.000000, 130.000000)">
+                                        <g id="like">
+                                            <g id="Icons/Action-Item/Like">
+                                                <g id="Like">
+                                                    <path
+                                                        d="M2,20 C0.896,20 0,19.104 0,18 L0,10 C0,8.896 0.896,8 2,8 C3.104,8 4,8.896 4,10 L4,18 C4,19.104 3.104,20 2,20"
+                                                        id="Fill-1" fill="#bdbdbd"></path>
+                                                    <g id="Group-5" transform="translate(6.000000, 0.000000)">
+                                                        <mask id="mask-2" fill="white">
+                                                            <use xlink:href="#path-1"></use>
+                                                        </mask>
+                                                        <g id="Clip-4"></g>
+                                                        <path
+                                                            d="M6.5068,6.6489 L7.9858,2.7059 C8.4768,1.3969 7.5088,-0.0001 6.1108,-0.0001 C5.4198,-0.0001 4.7778,0.3559 4.4118,0.9409 L1.2158,6.0539 C0.4218,7.3259 -0.0002,8.7949 -0.0002,10.2949 L-0.0002,14.9999 C-0.0002,17.2089 1.7908,18.9999 3.9998,18.9999 L8.2018,18.9999 C9.6248,18.9999 10.9408,18.2439 11.6568,17.0159 L12.9098,14.8679 C13.6238,13.6449 13.9998,12.2539 13.9998,10.8369 L13.9998,9.9999 C13.9998,8.8959 13.1048,7.9999 11.9998,7.9999 L7.4438,7.9999 C6.7448,7.9999 6.2618,7.3029 6.5068,6.6489"
+                                                            id="Fill-3" fill="#bdbdbd" mask="url(#mask-2)"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    21
+                </div>
+                <!-- save -->
+                <div class="flex text-base gap-2 hover:fill-gray-800 hover:stroke-gray-800" style="color: #bdbdbd;">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Action-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-Action-Items-Attributed" transform="translate(-136.000000, -150.000000)"
+                                fill="#bdbdbd">
+                                <g id="action-item-copy-3" transform="translate(20.000000, 20.000000)">
+                                    <g id="Group" transform="translate(24.000000, 130.000000)">
+                                        <g id="save" transform="translate(92.000000, 0.000000)">
+                                            <g id="Icons/Action-Item/Save">
+                                                <g id="Save">
+                                                    <path
+                                                        d="M14.085,18.4365 L10.915,15.9975 C10.375,15.5825 9.625,15.5825 9.085,15.9975 L5.915,18.4365 C4.928,19.1955 3.5,18.4925 3.5,17.2475 L3.5,4.9995 C3.5,3.3435 4.843,1.9995 6.5,1.9995 L13.5,1.9995 C15.157,1.9995 16.5,3.3435 16.5,4.9995 L16.5,17.2475 C16.5,18.4925 15.072,19.1955 14.085,18.4365"
+                                                        id="Fill-1"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    save
+                </div>
+                <!-- share -->
+                <div class="flex text-base gap-2 hover:fill-gray-800 hover:stroke-gray-800" style="color: #bdbdbd;">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Action-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop-Action-Items-Attributed" transform="translate(-236.000000, -150.000000)">
+                                <g id="action-item-copy-3" transform="translate(20.000000, 20.000000)">
+                                    <g id="Group" transform="translate(24.000000, 130.000000)">
+                                        <g id="share" transform="translate(192.000000, 0.000000)">
+                                            <g id="Icons/Action-Item/Share">
+                                                <g id="Share">
+                                                    <g id="Group-7" transform="translate(4.000000, 5.000000)"
+                                                        stroke="#bdbdbd" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="4">
+                                                        <path d="M12,0 L12,9" id="Stroke-1"></path>
+                                                        <path d="M12,0 L3,0" id="Stroke-3"></path>
+                                                        <path d="M12,0 L0,12" id="Stroke-5"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>Share
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="sm:w-2/3 w-full bg-[#ebebeb] sm:ml-auto sm:mr-auto mt-20 sm:pl-14 sm:pr-14 sm:pt-6 sm:pb-6 pl-6 pb-3 pt-4 pr-6 rounded-3xl"
+        style="height: fit-content;">
+        <div class="flex justify-between mb-6">
+            <h2 class="text-2xl font-bold">People to follow</h2>
+            <div class="flex justify-center items-center cursor-pointer">
+                <p class="font-medium hover:text-blue-600">View all</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="#808080" class="w-4 h-4 ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </div>
+
+        </div>
+        <div class=" sm:w-full w-full h-full">
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://s3-us-west-1.amazonaws.com/askplaybook/avatars/account-placeholder-square.png" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Sherzod Max</h2>
+                    <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p class="text-xs text-gray-400">29 action items</p>
+                </div>
+                <div
+                    class="sm:ml-5 flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://s3-us-west-1.amazonaws.com/askplaybook/avatars/account-placeholder-square.png" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Diana Mounter</h2>
+                    <p class="text-sm text-gray-600">Co-Founder / Lead Designer at Hoodzpah Design ...</p>
+                    <p class="text-xs text-gray-400">10 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://askplaybook.s3.amazonaws.com/avatars/2196_avatar.?1506556594" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Sara M</h2>
+                    <p class="text-sm text-gray-600">Co-Founder / Lead Designer at Hoodzpah Design ...</p>
+                    <p class="text-xs text-gray-400">7 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://s3-us-west-1.amazonaws.com/askplaybook/avatars/account-placeholder-square.png" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Bob Olmstead</h2>
+                    <p class="text-sm text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <p class="text-xs text-gray-400">9 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://s3-us-west-1.amazonaws.com/askplaybook/avatars/account-placeholder-square.png" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Kat Vellos</h2>
+                    <p class="text-sm text-gray-600">Product Designer specializing in UX Design at Slack</p>
+                    <p class="text-xs text-gray-400">3 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://askplaybook.s3.amazonaws.com/avatars/37_avatar.jpg?1498101274" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Jeremy Goldberg</h2>
+                    <p class="text-sm text-gray-600">Co-Founder / Lead Designer at Hoodzpah Design ...</p>
+                    <p class="text-xs text-gray-400">23 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://s3-us-west-1.amazonaws.com/askplaybook/avatars/account-placeholder-square.png" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Jina Anne</h2>
+                    <p class="text-sm text-gray-600">Design Systems Advocate at Sushi & Robots, LLC</p>
+                    <p class="text-xs text-gray-400">6 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+            <div class="flex items-center justify-between mt-3 mb-3">
+                <img class="w-16 h-16 rounded-full"
+                    src="https://askplaybook.s3.amazonaws.com/avatars/2270_avatar.jpg?1674235295" alt="">
+                <div class="ml-4 sm:w-full">
+                    <h2 class="text-base font-bold">Andrew Coyle</h2>
+                    <p class="text-sm text-gray-600">Co-Founder / Lead Designer at Hoodzpah Design ...</p>
+                    <p class="text-xs text-gray-400">14 action items</p>
+                </div>
+                <div
+                    class="flex bg-[#e0e0e0] h-10 pr-4 pl-4 justify-center items-center rounded-full font-medium gap-2 cursor-pointer hover:bg-[#d0d0d0] transition duration-200">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" class="mobile-hide">
+                        <g id="latest" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop/Collection" transform="translate(-1242.000000, -2360.000000)" fill="#000000">
+                                <g id="design-management-copy" transform="translate(56.000000, 2024.000000)">
+                                    <g id="Group-7-Copy-2" transform="translate(720.000000, 80.000000)">
+                                        <g id="Group-5-Copy-3" transform="translate(0.000000, 228.000000)">
+                                            <g id="card-2-copy" transform="translate(0.000000, 8.000000)">
+                                                <g id="Group-4">
+                                                    <g id="Group" transform="translate(452.000000, 12.000000)">
+                                                        <g id="Group-9" transform="translate(14.000000, 8.000000)">
+                                                            <g id="Page-1">
+                                                                <path
+                                                                    d="M16.1935,16.2478333 C15.2668333,12.6545 12.0051667,9.9995 8.1235,9.9995 C4.24016667,9.9995 0.9785,12.6545 0.0535,16.2478333 C-0.218166667,17.3028333 0.5885,18.3328333 1.67683333,18.3328333 L14.5701667,18.3328333 C15.6585,18.3328333 16.4651667,17.3028333 16.1935,16.2478333"
+                                                                    id="Combined-Shape"></path>
+                                                                <path
+                                                                    d="M10.8606667,3.54166667 C10.8606667,3.36333333 10.8806667,3.19166667 10.9123333,3.02333333 C10.9406667,2.87166667 10.8973333,2.71333333 10.7773333,2.615 C9.95233333,1.93666667 8.869,1.56166667 7.689,1.69166667 C5.77066667,1.90333333 4.21066667,3.46 4.00733333,5.37833333 C3.74233333,7.88333333 5.699,10 8.15066667,10 C10.259,10 11.9823333,8.42833333 12.259,6.39666667 C12.279,6.24666667 12.2056667,6.10166667 12.084,6.01 C11.3423333,5.43833333 10.8606667,4.54833333 10.8606667,3.54166667"
+                                                                    id="Fill-5"></path>
+                                                                <path
+                                                                    d="M18.9583333,2.5 L17.5,2.5 L17.5,1.04166667 C17.5,0.466666667 17.0333333,-1.77635684e-15 16.4583333,-1.77635684e-15 C15.8833333,-1.77635684e-15 15.4166667,0.466666667 15.4166667,1.04166667 L15.4166667,2.5 L13.9583333,2.5 C13.3833333,2.5 12.9166667,2.96666667 12.9166667,3.54166667 C12.9166667,4.11666667 13.3833333,4.58333333 13.9583333,4.58333333 L15.4166667,4.58333333 L15.4166667,6.04166667 C15.4166667,6.61666667 15.8833333,7.08333333 16.4583333,7.08333333 C17.0333333,7.08333333 17.5,6.61666667 17.5,6.04166667 L17.5,4.58333333 L18.9583333,4.58333333 C19.5333333,4.58333333 20,4.11666667 20,3.54166667 C20,2.96666667 19.5333333,2.5 18.9583333,2.5"
+                                                                    id="Fill-3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Follow
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-12 mb-6 mr-8 ml-8">
+    <footer class="mb-6 flex justify-between">
+        <p class="ml-8">© 2025 Playbook Labs, Inc.</p>
+        <div class="flex gap-6 mr-8">
+            <svg class="hover:text-blue-600 transition duration-200 cursor-pointer " width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Group-7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group-3-Copy-14" fill="currentColor ">
+                        <g id="Twitter_Logo_Blue">
+                            <g id="Logo_FIXED">
+                                <path
+                                    d="M7.66316883,21.4993247 C16.4845714,21.4993247 21.3095065,14.1908571 21.3095065,7.85298701 C21.3095065,7.6454026 21.3095065,7.43875325 21.2954805,7.23303896 C22.234128,6.55409846 23.0443843,5.71344567 23.6883117,4.75044156 C22.8129778,5.13830815 21.8844118,5.39267094 20.9336104,5.50503896 C21.9348255,4.90564556 22.6841674,3.96290367 23.0421818,2.85225974 C22.1007187,3.41091926 21.070734,3.80463462 19.9966753,4.01641558 C18.5099995,2.43558946 16.1476856,2.0486767 14.2343837,3.07263578 C12.3210818,4.09659485 11.3326208,6.27677211 11.8232727,8.39064935 C7.96696744,8.19732424 4.37405528,6.3758867 1.9387013,3.37963636 C0.665725175,5.57109637 1.31593672,8.37462185 3.42358442,9.78202597 C2.66032944,9.75940446 1.91371578,9.55350843 1.24675325,9.18171429 L1.24675325,9.24249351 C1.24737799,11.5255415 2.85670269,13.491929 5.09454545,13.944 C4.38844949,14.1365673 3.64760782,14.1647167 2.92893506,14.0262857 C3.55725001,15.9800317 5.35783595,17.3184472 7.40976623,17.356987 C5.71144056,18.6917286 3.61345824,19.4163064 1.4534026,19.4141299 C1.07180593,19.4133973 0.690580425,19.3902927 0.311688312,19.3449351 C2.50501024,20.7524664 5.05706188,21.49906 7.66316883,21.4955844"
+                                    id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <svg class="hover:text-blue-600 transition duration-200 cursor-pointer " width="24px" height="24px"
+                viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Icons-/-Social-/-facebook">
+                        <g id="social-facebook">
+                            <g id="Rectangle-3" transform="translate(2.000000, 2.000000)" fill="currentColor">
+                                <path
+                                    d="M14.5,20 L16,20 C18.209139,20 20,18.209139 20,16 L20,4 C20,1.790861 18.209139,-4.05812251e-16 16,0 L4,0 L4,0 C1.790861,4.05812251e-16 -2.705415e-16,1.790861 0,4 L0,4 L0,16 C2.705415e-16,18.209139 1.790861,20 4,20 L7,20 L10,20 L10,12 L7.5,12 L7.5,9 L10,9 L10,7.011 C10,4.427 11.462,3.021 13.766,3.021 C14.87,3.021 15.723,3.103 16,3.14 L16,5.839 L14.496,5.84 C13.243,5.84 13,6.435 13,7.309 L13,9 L16,9 L15.6,12 L13,12 L13,20 L14.5,20 Z"
+                                    id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>
